@@ -1,0 +1,36 @@
+{
+  "name": "backup2",
+  "version": "0.1.0",
+  "description": "backup",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gavinning/backup.git"
+  },
+  "keywords": [
+    "backup",
+    "backup2",
+    "timemachine",
+    "time machine",
+    "备份",
+    "恢复",
+    "时光机"
+  ],
+  "author": "gavinning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gavinning/backup/issues"
+  },
+  "homepage": "https://github.com/gavinning/backup#readme",
+  "dependencies": {
+    "aimee-class": "^1.0.2",
+    "json-format": "^0.1.1",
+    "linco.lab": "^0.2.0",
+    "progress": "^1.1.8",
+    "thenjs": "^2.0.2",
+    "vpm-package": "^1.0.2"
+  }
+}

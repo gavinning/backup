@@ -1,0 +1,9 @@
+{
+    "backupList": [
+        {
+            "source": "/Users/gavinning/Documents/lab/services",
+            "target": "/Users/gavinning/Documents/lab/github/backup/test",
+            "filter": [".git/**", ".svn/**"]
+        }
+    ]
+}
