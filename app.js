@@ -1,19 +1,9 @@
-var $ = require('thenjs');
-var backup = require('./lib/backup');
-
-
 exports.start = function(url){
-    var config = require(url);
-    $(config.backupList)
-        .eachSeries(null, function(next, item){
-            backup.start(item, function(err){
-                err ?
-                    console.log(err.message):
-                    next();
-            })
-        })
+    require('./lib/task').start(require(url))
 }
 
+// For test
+exports.start('./config')
 
 // =========
 /*

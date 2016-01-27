@@ -1,7 +1,9 @@
 {
     "backupList": [
         {
-            "source": "/Users/gavinning/Documents/lab/services",
+            "name": "defaultTask",
+            "strict": false,
+            "source": "/Users/gavinning/Documents/lab/github/dir",
             "target": "/Users/gavinning/Documents/lab/github/backup/test",
             "filter": [".git/**", ".svn/**"]
         }
