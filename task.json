@@ -1,0 +1,26 @@
+{
+    "backupTask": {
+        "name": "defaultTask",
+        "strict": false,
+        "filter": [".git/**", ".svn/**"],
+        "target": "/Users/gavinning/Documents/lab/github/backup/test",
+        "BACKUPTIME": 1,
+        "MAPFILENAME": ".map.json",
+        "MAPFILENAMEPATH": ".map.json",
+        "CONFIGFILENAME": ".backup.json",
+        "CONFIGFILENAMEPATH": ".backup.json",
+
+        "list": [
+            {
+                "filter": ["*.md"],
+                "source": "/Users/gavinning/Documents/lab/github/dir"
+            },
+            {
+                "source": "/Users/gavinning/Documents/lab/github/lab"
+            },
+            {
+                "source": "/Users/gavinning/Documents/lab/services"
+            }
+        ]
+    }
+}
