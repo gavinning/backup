@@ -6,3 +6,4 @@ exports.restore = require('./restore');
 
 // For db
 exports.db = require('./db')
+// 1234

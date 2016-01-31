@@ -3,7 +3,7 @@
         "name": "defaultTask",
         "strict": false,
         "filter": [".git/**", ".svn/**", "node_modules/**"],
-        "target": "/Users/gavinning/Documents/lab/github/backup/test",
+        "target": "E:\\OSS\\work\\github\\backup\\test",
         "MAPFILENAME": ".map.json",
         "MAPFILENAMEPATH": ".map.json",
         "CONFIGFILENAME": ".backup.json",
@@ -12,7 +12,7 @@
         "list": [
             {
                 "filter": ["*.md", "**/node_modules/**"],
-                "source": "/Users/gavinning/Documents/lab/github/dir"
+                "source": "E:\\OSS\\work\\github\\test"
             }
         ]
     }
