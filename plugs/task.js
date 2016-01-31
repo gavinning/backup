@@ -11,22 +11,19 @@ function task(config){
     // 更新数据本次备份信息
     config.db.version = task.id();
     config.db.versions.push(config.db.version);
-    config.time.lastModified = config.time;
+    config.db.time.lastModified = config.time;
+    config.db.time[config.db.version] = config.time;
 
     // 更新任务信息列表
     config.list.forEach(function(target){
         // 任务id
         target.id = config.db.version;
-        // 任务模式，严格或宽松
-        target.strict = target.strict || config.strict;
         // 任务文件夹名
         target.basename = path.basename(target.source);
         // 任务名
         target.name = target.name || target.basename;
         // 任务目标地址
         target.target = path.join(task.dirname(), target.id, target.basename);
-        // 任务文件Map列表
-        target.map = path.join(task.dirname(), config.MAPFILENAME.replace('.json', '.' + target.basename + '.json'))
         // 任务过滤规则
         target.filter ?
             target.filter = config.filter.concat(target.filter):

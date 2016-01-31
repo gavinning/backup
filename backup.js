@@ -3,13 +3,16 @@ var color = require('bash-color');
 var nicetime = require('a-nice-time');
 var db = require('./plugs/db');
 var task = require('./plugs/task');
+var find = require('./plugs/find');
+var plan = require('./plugs/plan');
+var map = require('./plugs/map');
 var time = require('./plugs/time');
 var backup = require('./lib/backup');
 var lib = require('./lib/lib');
 var MinTime = (1000 * 60 * 10);
 
 // 开始备份操作
-exports.start = function(url){
+exports._start = function(url){
     var st, Countdown = 0;
 
     // 按秒计时
@@ -82,7 +85,7 @@ exports.pipe = function(handler){
 }
 
 // 执行数据备份
-exports.done = function(){
+exports._done = function(){
     lib.log(0, 'Create backup task...');
     lib.log(0, 'Task id:', this.config.db.version);
     lib.log(0, 'Task name:', this.config.name);
@@ -146,6 +149,30 @@ function timer(time, url){
     setInterval(function(){
         exports.start(url)
     }, time || 8.64e+7)
+}
+
+exports.start = function(url){
+    this
+        // Get config
+        .get(url)
+        // Get version
+        .pipe(time())
+        // Get db
+        .pipe(db())
+        // Parse task
+        .pipe(task())
+        // Find files
+        .pipe(find())
+        // Map files
+        .pipe(map())
+        // Handle plan
+        .pipe(plan())
+        .done()
+}
+
+exports.done = function(){
+    console.log(this.config.list[0].diff)
+    console.log(this.config.list[0].same)
 }
 
 exports.start('./task.json')

@@ -1,17 +1,11 @@
 {
     "backupTask": {
         "name": "defaultTask",
-        "strict": false,
-        "filter": [".git/**", ".svn/**", "node_modules/**"],
+        "filter": [".git/**", ".svn/**", "**/node_modules/**"],
         "target": "E:\\OSS\\work\\github\\backup\\test",
-        "MAPFILENAME": ".map.json",
-        "MAPFILENAMEPATH": ".map.json",
-        "CONFIGFILENAME": ".backup.json",
-        "CONFIGFILENAMEPATH": ".backup.json",
-
         "list": [
             {
-                "filter": ["*.md", "**/node_modules/**"],
+                "filter": ["*.md"],
                 "source": "E:\\OSS\\work\\github\\test"
             }
         ]
