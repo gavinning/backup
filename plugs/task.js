@@ -1,4 +1,5 @@
-path = require('path');
+var path = require('path');
+var lib = require('linco.lab').lib;
 
 module.exports = function(){
     return task
@@ -34,8 +35,8 @@ function task(config){
         // 不存在则执行全量备份
         config.db.versions.length > 1 ?
             target.type = 'add' : target.type = 'full';
-
     })
+    lib.log(0, 'Task id:', config.db.version);
     return config
 }
 

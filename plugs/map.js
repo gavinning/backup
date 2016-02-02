@@ -1,4 +1,7 @@
+var path = require('path');
+var color = require('bash-color');
 var lib = require('linco.lab').lib;
+var ProgressBar = require('progress');
 
 // Map需要备份的文件
 function map(config){
@@ -17,12 +20,23 @@ function map(config){
  */
 function Map(arr, source, target){
     var list = [];
+    // 创建Checking进度条
+    var bar = new ProgressBar('  ' + color.cyan('FindMaping') +' [:bar] :percent :etas', {
+        complete: '=',
+        incomplete: '-',
+        width: 40,
+        total: arr.length
+    });
     arr.forEach(function(item){
-        list.push({
-            src: item,
-            // Map dest url
-            dest: path.join(target, path.relative(source, item))
-        })
+        // 过滤文件夹
+        if(lib.isFile(item)){
+            list.push({
+                src: item,
+                // Map dest url
+                dest: path.join(target, path.relative(source, item))
+            })
+        }
+        bar.tick();
     })
     return list;
 }

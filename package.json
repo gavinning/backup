@@ -29,6 +29,7 @@
     "a-nice-time": "^1.0.1",
     "aimee-class": "^1.0.2",
     "bash-color": "0.0.3",
+    "countdown": "^2.6.0",
     "json-format": "^0.1.1",
     "linco.lab": "^0.2.0",
     "md5": "^2.0.0",

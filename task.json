@@ -1,12 +1,12 @@
 {
     "backupTask": {
         "name": "defaultTask",
-        "filter": [".git/**", ".svn/**", "**/node_modules/**"],
-        "target": "E:\\OSS\\work\\github\\backup\\test",
+        "filter": [".git/**", ".svn/**"],
+        "target": "/Users/gavinning/Documents/lab/github/backup/test",
         "list": [
             {
                 "filter": ["*.md"],
-                "source": "E:\\OSS\\work\\github\\test"
+                "source": "/Users/gavinning/Documents/lab/github/test"
             }
         ]
     }
