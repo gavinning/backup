@@ -1,13 +1,11 @@
 {
-    "backupTask": {
-        "name": "defaultTask",
-        "filter": [".git/**", ".svn/**"],
-        "target": "/Users/gavinning/Documents/lab/github/backup/test",
-        "list": [
-            {
-                "filter": ["*.md"],
-                "source": "/Users/gavinning/Documents/lab/github/test"
-            }
-        ]
-    }
+    "name": "defaultTask",
+    "filter": [".git/**", ".svn/**"],
+    "target": "/Users/gavinning/Documents/lab/github/backup/test",
+    "list": [
+        {
+            "filter": ["*.md"],
+            "source": "/Users/gavinning/Documents/lab/github/test"
+        }
+    ]
 }

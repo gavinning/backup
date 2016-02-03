@@ -61,7 +61,7 @@ function backup(config, fn){
                 })
         })
         .then(function(){
-            fn(null)
+            fn(null, config)
         })
         .fail(function(err){
             fn(err)
