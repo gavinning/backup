@@ -1,5 +1,5 @@
 // For backup
-exports.backup = require('./backup');
+exports.backup = require('./lib/backup');
 
 // For restore
-exports.restore = require('./restore');
+exports.restore = require('./lib/restore');
